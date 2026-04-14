@@ -75,7 +75,7 @@ keybinds clear-defaults=true {
 		bind "G" { ScrollToBottom; SwitchToMode "Normal"; }
 		bind "j" "Down" { ScrollDown; }
 		bind "k" "Up" { ScrollUp; }
-		bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
+		// bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
 		bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
 		bind "d" { HalfPageScrollDown; }
 		bind "u" { HalfPageScrollUp; }
@@ -154,6 +154,7 @@ keybinds clear-defaults=true {
 		bind "Alt -" { Resize "Decrease"; }
 		bind "Alt [" { PreviousSwapLayout; }
 		bind "Alt ]" { NextSwapLayout; }
+        bind "Ctrl f" { ToggleFloatingPanes; }
 	}
 	shared_except "normal" "locked" {
 		bind "Enter" "Esc" { SwitchToMode "Normal"; }
@@ -190,6 +191,7 @@ plugins {
 
 theme "ansi"
 
+show_startup_tips false
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
 // eg. when terminal window with an active zellij session is closed
 // Options:
